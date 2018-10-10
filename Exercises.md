@@ -6,7 +6,7 @@ Map : for each inteager i in the file , emit key-value pair(m,i)<br> Reduce:inpu
 ### solution (b)
 Map : for each inteager i in the file , emit key-value pair(m,i)<br> Reduce:input of this task is pair thet this key is m,and associated value is list[i1,...,in] that each ij is value of pair of output of map task.output of reduce task is pair(1,averge{i1,..,in}) 
 ### solution (c)
-Map : for each inteager i in the file , emit key-value pair(i,i)<br> Reduce:input of this task is pair thet this key is i,and associated value is lis[i,..,i].that each i is value of pair of output of map task. output of reduce task is pair(i,i) <br> it produces exactly one pair (i,i) for this key i.
+Map : for each inteager i in the file , emit key-value pair(i,i)<br> Reduce:input of this task is pair thet this key is i,and associated value is lis[i,..,i].that each i is value of pair of output of map task. output of reduce task is pair(i,i) <br> it produces exactly one pair (i,i) for this key i.<br> The second method: Map: for each inteager i in the file,emite key-value pair(i,1)<br> Reduce: turn the value list into 1.<br> note the result is obtain from the keys of the output.
 ### solution (d)
 we sould use two map-reduse <br> 1: Map : for each inteager i in the file , emit key-value pair(i,i)<br> Reduce:input of this task is pair thet this key is i,and associated value is lis[i,..,i].that each i is value of pair of output of map task. output of reduce task is pair(i,i) <br> it produces exactly one pair (i,i) for this key i. <br>  2:  Map : for each inteager i in the file , emit key-value pair(1,1) <br> Reduce : input of this task is pair thet this key is 1 ,and associated value is lis[1,..,1].that each 1 is value of pair of output of map task.output of reduce task is pair(1,sum{1,...,1}).output of reduce task is number of distinct integers in the input.
 ## Exercise 2.3.2 : 
@@ -16,3 +16,11 @@ The matrix M and the vector v each will be stored in a file of the DFS. We assum
 ## ! Exercise 2.3.3 :
 In the form of relational algebra implemented in SQL, relations are not sets, but bags; that is, tuples are allowed to appear more than once. There are extended definitions of union, intersection, and difference for bags, which we shall define below. Write map-reduce algorithms for computing the following operations on bags R and S: <br>(a) Bag Union, defined to be the bag of tuples in which tuple t appears the sum of the numbers of times it appears in R and S.<br> (b) Bag Intersection, defined to be the bag of tuples in which tuple t appears the minimum of the numbers of times it appears in R and S.<br> (c) Bag Difference, defined to be the bag of tuples in which the number of times a tuple t appears is equal to the number of times it appears in R minus the number of times it appears in S. A tuple that appears more times in S than in R does not appear in the difference.
 ### solution (a)
+
+
+
+### solution (b)
+
+
+
+### solution (c)
