@@ -20,3 +20,12 @@ Map: for each tuple t in R and S emit key-value pair(t,t) <br> Reduce: input: (t
 ### solution (b)
 1: Map: for each tuple t in R emit key-value pair((t,R),1) and  for each tuple t in S emit key-value pair((t,S),1) <br> Reduce : input:((t,R),[1,..,1])or((t,S),[1,..,1]) output: ((t,R),sum[1,..,1]=m)or((t,S),sum[1,..,1]=n)<br> 2: Map:input: ((t,R),m) or ((t,S),n) output:(t,m)or(t,n) <br> Reduce: input:(t,[m,n]) output:(t,min(m,n)=d) <br> 3: Map: input: (t,d) output:(t,d) <br> Reduce: input:(t,d) output:produce d tuple(t,t).
 ### solution (c)
+1: Map: for each tuple t in R emit key-value pair((t,R),1) and  for each tuple t in S emit key-value pair((t,S),1) <br> Reduce : input:((t,R),[1,..,1])or((t,S),[1,..,1]) output: ((t,R),sum[1,..,1]=m)or((t,S),sum[1,..,1]=n)<br> 2: Map:input: ((t,R),m) or ((t,S),n) output:(t,m)or(t,n) <br> Reduce: input:(t,[m,n]) output:(t,m-n=d) <br> 3: Map: input: (t,d) output:(t,d) <br> Reduce: input : (t,d) output : produce d tuple(t,t).(if d=<0,prodce nothing)
+## ! Exercise 2.3.4:
+Selection can also be performed on bags. Give a map-reduce implementation that produces the proper number of copies of each tuple t that passes the selection condition. That is, produce key-value pairs from which the correct result of the selection can be obtained easily from the values.
+### solution
+Map: for each tuple t stisfy C output:(t,1)<br> Reduce: input:(t,[1,..,1]) output: (t,sum(1,..,1))
+## Exercise 2.3.5 :
+The relational-algebra operation R(A,B) ⊲⊳ B<C S(C,D) produces all tuples (a, b, c, d) such that tuple (a, b) is in relation R, tuple (c, d) is in S, and b < c. Give a map-reduce implementation of this operation, assuming R and S are sets.
+### solution
+
