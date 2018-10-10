@@ -5,4 +5,5 @@ Map : for each inteager i in the file , emit key-value pair(m,i)<br> Reduce:inpu
 # solution (b)
 Map : for each inteager i in the file , emit key-value pair(m,i)<br> Reduce:input of this task is pair thet this key is m,and associated value is list[i1,...,in] that each ij is value of pair of output of map task.output of reduce task is pair(1,averge{i1,..,in}) 
 # solution (c)
-Map : for each inteager i in the file , emit key-value pair(i,i)<br> Reduce:input of this task is pair thet this key is t,and n associated value is lis[i1,...,in].that each ij is value of pair of output of map task.d
+Map : for each inteager i in the file , emit key-value pair(i,i)<br> Reduce:input of this task is pair thet this key is t,and associated value is lis[t,...t].that each t is value of pair of output of map task. output of reduce task is pair(t,t)<br> it produces exactly one pair (t,t) for this key t.
+# solution (d)
