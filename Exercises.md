@@ -16,11 +16,7 @@ The matrix M and the vector v each will be stored in a file of the DFS. We assum
 ## ! Exercise 2.3.3 :
 In the form of relational algebra implemented in SQL, relations are not sets, but bags; that is, tuples are allowed to appear more than once. There are extended definitions of union, intersection, and difference for bags, which we shall define below. Write map-reduce algorithms for computing the following operations on bags R and S: <br>(a) Bag Union, defined to be the bag of tuples in which tuple t appears the sum of the numbers of times it appears in R and S.<br> (b) Bag Intersection, defined to be the bag of tuples in which tuple t appears the minimum of the numbers of times it appears in R and S.<br> (c) Bag Difference, defined to be the bag of tuples in which the number of times a tuple t appears is equal to the number of times it appears in R minus the number of times it appears in S. A tuple that appears more times in S than in R does not appear in the difference.
 ### solution (a)
-
-
-
+Map: for each tuple t in R and S emit key-value pair(t,t) <br> Reduce: input: (t,t) output : (t,t) 
 ### solution (b)
-
-
-
+1: Map: for each tuple t in R emit key-value pair((t,R),1) and  for each tuple t in S emit key-value pair((t,S),1) <br> Reduce : input:((t,R),[1,..,1])or((t,S),[1,..,1]) output: ((t,R),sum[1,..,1]=m)or((t,S),sum[1,..,1]=n)<br> 2: Map:input: ((t,R),m) or ((t,S),n) output:(t,m)or(t,n) <br> Reduce: input:(t,[m,n]) output:(t,min(m,n)=d) <br> 3: Map: input: (t,d) output:(t,d) <br> Reduce: input:(t,d) output:produce d tuple(t,t).
 ### solution (c)
