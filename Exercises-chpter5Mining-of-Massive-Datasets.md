@@ -21,7 +21,18 @@ all nodes in the clique have the same PageRank value, so we suppose vector v to 
 sulotion: There will be only one node, the head node with a self‐direction, and PageRank for this node is 1. PageRank for all the remaining nodes will be 1/2. <br>
 ### Exercise 5.1.7 : Repeat Exercise 5.1.6 for the tree of dead ends suggested by Fig. 5.10. That is, there is a single node with a self-loop, which is also the root of a complete binary tree of n levels. <br> 
 sulotion: There will be only one node, the head node with a self‐direction,  and PageRank for this node is 1. PageRank for all the remaining node in          step 1 = <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{3}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{3}" title="\frac{1}{3}" /></a>                 step 2 = <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{6}" title="\frac{1}{6}" /></a>                     step n = <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{3n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{3n}" title="\frac{1}{3n}" /></a>   <br> 
-
-
+### Exercise 5.2.1 : Suppose we wish to store an n × n boolean matrix (0 and 1 elements only). We could represent it by the bits themselves, or we could represent the matrix by listing the positions of the 1’s as pairs of integers, each integer requiring ⌈log2 n⌉ bits. The former is suitable for dense matrices; the latter is suitable for sparse matrices. How sparse must the matrix be (i.e., what fraction of the elements should be 1’s) for the sparse representation to save space? <br> 
+sulotion <br> 
+### Exercise 5.2.2 : Using the method of Section 5.2.1, represent the transition matrices of the following graphs: <br> (a) Figure 5.4 <br> (b) Figure 5.7. <br>
+sulotion(a) : SOURCE            DEGREE        DESTINATION  <br> 
+             A                  3             B,C,D      <br>
+             B                  2              A,D       <br> 
+             C                  1               E        <br> 
+             D                  2              B,C       <br> 
+sulotion(b) : SOURCE            DEGREE        DESTINATION  <br>  
+               a                3             a,b,c         <br> 
+               b                2             a,c           <br>
+               c                2             b,c           <br> 
+ 
 
 
