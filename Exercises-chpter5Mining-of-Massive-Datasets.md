@@ -24,15 +24,38 @@ sulotion: There will be only one node, the head node with a self‐direction,  a
 ### Exercise 5.2.1 : Suppose we wish to store an n × n boolean matrix (0 and 1 elements only). We could represent it by the bits themselves, or we could represent the matrix by listing the positions of the 1’s as pairs of integers, each integer requiring ⌈log2 n⌉ bits. The former is suitable for dense matrices; the latter is suitable for sparse matrices. How sparse must the matrix be (i.e., what fraction of the elements should be 1’s) for the sparse representation to save space? <br> 
 sulotion <br> 
 ### Exercise 5.2.2 : Using the method of Section 5.2.1, represent the transition matrices of the following graphs: <br> (a) Figure 5.4 <br> (b) Figure 5.7. <br>
-sulotion(a) : SOURCE            DEGREE        DESTINATION  <br> 
-             A                  3             B,C,D      <br>
-             B                  2              A,D       <br> 
-             C                  1               E        <br> 
-             D                  2              B,C       <br> 
-sulotion(b) : SOURCE            DEGREE        DESTINATION  <br>  
-               a                3             a,b,c         <br> 
-               b                2             a,c           <br>
-               c                2             b,c           <br> 
- 
+sulotion(a) : SOURCE        //    DEGREE    //    DESTINATION  <br> 
+             A              //    3        //     B,C,D      <br>
+             B             //     2        //      A,D       <br> 
+             C            //      1        //       E        <br> 
+             D            //      2       //       B,C       <br> 
+sulotion(b) : SOURCE   //         DEGREE    //    DESTINATION  <br>  
+               a       //         3        //     a,b,c         <br> 
+               b       //         2        //     a,c           <br>
+               c      //          2       //      b,c           <br> 
+### Exercise 5.2.3 : Using the method of Section 5.2.4, represent the transition matrices of the graph of Fig. 5.3, assuming blocks have side 2. <br>
+sulotion : The four‐node graph is divided into four 2‐by‐2 blocks (M11, M12, M21, M22). <br> 
+M11: <br>
+Source // Degree // Destinations <br>
+A// 3 //B <br>
+B // 2 // A  <br> 
+M12: <br>
+Source // Degree //  Destinations <br>
+D// 2 // B  <br>
+M21:   <br>
+Source // Degree // Destinations  <br>
+A // 3 // C, D  <br> 
+B // 2 // D    <br>
+M22:  <br> 
+Source //  Degree //  Destinations <br> 
+D // 2 //  C <br>
+### Exercise 5.2.4 : Consider a Web graph that is a chain, like Fig. 5.9, with n nodes. As a function of k, which you may assume divides n, describe the representation of the transition matrix for this graph, using the method of Section 5.2.4.  <br> 
+sulotion : <br>
+### Exercise 5.3.1 : Compute the topic-sensitive PageRank for the graph of Fig.5.15, assuming the teleport set is:<br>(a) A only.<br>(b) A and C. <br> 
+sulotion : The transition matrix of Figure 5.15 is: <br> 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{6}\begin{bmatrix}&space;0&space;&&space;\frac{1}{2}&space;&&space;1&space;&0&space;\\&space;\frac{1}{3}&space;&&space;0&space;&&space;0&space;&\frac{1}{2}&space;\\&space;\frac{1}{3}&space;&&space;0&space;&&space;0&space;&\frac{1}{2}&space;\\&space;\frac{1}{3}&space;&&space;\frac{1}{2}&space;&&space;0&space;&&space;0&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{6}\begin{bmatrix}&space;0&space;&&space;\frac{1}{2}&space;&&space;1&space;&0&space;\\&space;\frac{1}{3}&space;&&space;0&space;&&space;0&space;&\frac{1}{2}&space;\\&space;\frac{1}{3}&space;&&space;0&space;&&space;0&space;&\frac{1}{2}&space;\\&space;\frac{1}{3}&space;&&space;\frac{1}{2}&space;&&space;0&space;&&space;0&space;\end{bmatrix}" title="\frac{1}{6}\begin{bmatrix} 0 & \frac{1}{2} & 1 &0 \\ \frac{1}{3} & 0 & 0 &\frac{1}{2} \\ \frac{1}{3} & 0 & 0 &\frac{1}{2} \\ \frac{1}{3} & \frac{1}{2} & 0 & 0 \end{bmatrix}" /></a>      <br> Suppose β is 0.8  <br> (a) <br> <a href="https://www.codecogs.com/eqnedit.php?latex=T=\begin{bmatrix}&space;0&space;&&space;\frac{2}{5}&space;&&space;\frac{4}{5}&space;&0&space;\\&space;\frac{4}{15}&space;&&space;0&space;&&space;0&space;&\frac{2}{5}&space;\\&space;\frac{4}{15}&space;&&space;0&space;&&space;0&space;&\frac{2}{5}&space;\\&space;\frac{4}{15}&space;&&space;\frac{2}{5}&space;&&space;0&space;&&space;0&space;\end{bmatrix}V&plus;\begin{bmatrix}&space;\frac{1}{5}\\&space;0\\&space;0\\&space;0&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?T=\begin{bmatrix}&space;0&space;&&space;\frac{2}{5}&space;&&space;\frac{4}{5}&space;&0&space;\\&space;\frac{4}{15}&space;&&space;0&space;&&space;0&space;&\frac{2}{5}&space;\\&space;\frac{4}{15}&space;&&space;0&space;&&space;0&space;&\frac{2}{5}&space;\\&space;\frac{4}{15}&space;&&space;\frac{2}{5}&space;&&space;0&space;&&space;0&space;\end{bmatrix}V&plus;\begin{bmatrix}&space;\frac{1}{5}\\&space;0\\&space;0\\&space;0&space;\end{bmatrix}" title="T=\begin{bmatrix} 0 & \frac{2}{5} & \frac{4}{5} &0 \\ \frac{4}{15} & 0 & 0 &\frac{2}{5} \\ \frac{4}{15} & 0 & 0 &\frac{2}{5} \\ \frac{4}{15} & \frac{2}{5} & 0 & 0 \end{bmatrix}V+\begin{bmatrix} \frac{1}{5}\\ 0\\ 0\\ 0 \end{bmatrix}" /></a>   <br> If we solve this equation directly, we get <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;\frac{3}{7}\\&space;\frac{4}{21}\\&space;\frac{4}{21}\\&space;\frac{4}{21}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;\frac{3}{7}\\&space;\frac{4}{21}\\&space;\frac{4}{21}\\&space;\frac{4}{21}&space;\end{bmatrix}" title="\begin{bmatrix} \frac{3}{7}\\ \frac{4}{21}\\ \frac{4}{21}\\ \frac{4}{21} \end{bmatrix}" /></a>    <br> (b) <br> <a href="https://www.codecogs.com/eqnedit.php?latex=T=\begin{bmatrix}&space;0&space;&&space;\frac{2}{5}&space;&&space;\frac{4}{5}&space;&&space;0\\&space;\frac{4}{15}&space;&&space;0&space;&&space;0&space;&&space;\frac{2}{5}\\&space;\frac{4}{15}&space;&&space;0&space;&&space;0&space;&\frac{2}{5}&space;\\&space;\frac{4}{15}&space;&&space;\frac{2}{5}&space;&&space;0&space;&&space;0&space;\end{bmatrix}V&plus;\begin{bmatrix}&space;\frac{1}{10}\\&space;0\\&space;\frac{1}{10}\\&space;0&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?T=\begin{bmatrix}&space;0&space;&&space;\frac{2}{5}&space;&&space;\frac{4}{5}&space;&&space;0\\&space;\frac{4}{15}&space;&&space;0&space;&&space;0&space;&&space;\frac{2}{5}\\&space;\frac{4}{15}&space;&&space;0&space;&&space;0&space;&\frac{2}{5}&space;\\&space;\frac{4}{15}&space;&&space;\frac{2}{5}&space;&&space;0&space;&&space;0&space;\end{bmatrix}V&plus;\begin{bmatrix}&space;\frac{1}{10}\\&space;0\\&space;\frac{1}{10}\\&space;0&space;\end{bmatrix}" title="T=\begin{bmatrix} 0 & \frac{2}{5} & \frac{4}{5} & 0\\ \frac{4}{15} & 0 & 0 & \frac{2}{5}\\ \frac{4}{15} & 0 & 0 &\frac{2}{5} \\ \frac{4}{15} & \frac{2}{5} & 0 & 0 \end{bmatrix}V+\begin{bmatrix} \frac{1}{10}\\ 0\\ \frac{1}{10}\\ 0 \end{bmatrix}" /></a>   <br>  If we solve this equation directly, we get  <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;\frac{27}{70}\\&space;\frac{6}{35}\\&space;\frac{19}{70}\\&space;\frac{6}{35}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;\frac{27}{70}\\&space;\frac{6}{35}\\&space;\frac{19}{70}\\&space;\frac{6}{35}&space;\end{bmatrix}" title="\begin{bmatrix} \frac{27}{70}\\ \frac{6}{35}\\ \frac{19}{70}\\ \frac{6}{35} \end{bmatrix}" /></a>   <br>
+### Exercise 5.4.1 : In Section 5.4.2 we analyzed the spam farm of Fig. 5.16, where every supporting page links back to the target page. Repeat the analysis for a spam farm in which: <br> (a) Each supporting page links to itself instead of to the target page. <br> (b) Each supporting page links nowhere. <br> (c) Each supporting page links both to itself and to the target page. <br>
+sulotion: 
+
 
 
